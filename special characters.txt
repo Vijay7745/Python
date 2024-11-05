@@ -1,0 +1,35 @@
+s=input()
+c=0
+for i in s:
+    if not i.isalpha() and not i.isdigit():
+        c+=1
+e=[i for i in s if i.isdigit() and int(i)%2==0]
+o=[i for i in s if i.isdigit() and int(i)%2!=0]
+if c%2==0:
+    if len(e)==len(o):
+        for i in range(len(e)):
+            print(str(e[i])+str(o[i]),end='')
+    elif len(e)<len(o):
+        for i in range(len(e)):
+            print(str(e[i])+str(o[i]),end='')
+        for i in range(len(e),len(o)):
+            print(str(o[i]),end='')
+    else:
+        for i in range(len(o)):
+            print(str(e[i])+str(o[i]),end='')
+        for i in range(len(o),len(e)):
+            print(str(e[i]),end='')
+else:
+    if len(e)==len(o):
+        for i in range(len(e)):
+            print(str(o[i])+str(e[i]),end='')
+    elif len(e)<len(o):
+        for i in range(len(e)):
+            print(str(o[i])+str(e[i]),end='')
+        for i in range(len(e),len(o)):
+            print(str(o[i]),end='')
+    else:
+        for i in range(len(o)):
+            print(str(o[i])+str(e[i]),end='')
+        for i in range(len(o),len(e)):
+            print(str(e[i]),end='')

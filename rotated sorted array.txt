@@ -1,0 +1,7 @@
+def pivotedBinarySearch(arr, n, key):
+ 
+    pivot = findPivot(arr, 0, n-1);
+ 
+
+    if pivot == -1:
+        return binarySearch(arr, 0, n-1, key);

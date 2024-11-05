@@ -1,0 +1,17 @@
+def check(n,r,k,c,m):
+    tm=r+((n-m)*k)
+    p=tm//c
+    if p<m:
+        return False
+    return True
+for q in range(int(input())):
+    n,r,k,c=map(int,input().split())
+    l,h,a=0,n,0
+    while l<=h:
+        m=l+(h-l)//2
+        if check(n,r,k,c,m):
+            a=m
+            l=m+1
+        else:
+            h=m-1
+    print(a)

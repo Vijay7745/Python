@@ -1,0 +1,19 @@
+n=int(input())
+l=list(input().split())
+m=''.join(l)
+d=[]
+I=[]
+for j in range(len(l)):
+    for i in range(j+1,len(l)):
+        if m[j:i].count('0')==m[j:i].count('1'):
+            d.append(m[j:i])
+            I.append([j,i-1])
+if len(d)==0:
+    print(-1)
+else:
+    max=d[0]
+    for i in d:
+        if len(i)>len(max):
+            max=i
+    k=d.index(max) 
+    print(I[k][0],I[k][1])

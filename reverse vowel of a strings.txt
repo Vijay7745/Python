@@ -1,0 +1,15 @@
+a=input()
+l=""
+
+for i in a:
+    if i in 'aeiouAEIOU':
+        l+=i
+        
+new_a = ""
+for k in a:
+    if k in "aeiouAEIOU":
+        new_a += l[-1]
+        l = l[:-1]
+    else:
+        new_a += k
+print(new_a)

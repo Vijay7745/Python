@@ -1,0 +1,15 @@
+n=int(input())
+t=[]
+while n:
+    n=n-1
+    k=int(input())
+    t.append(k)
+fee=int(input())
+f=0
+for i in t:
+    if i in t:
+        if i<=fee:
+            f=f+1
+        else:
+            f=f+2
+print(f)

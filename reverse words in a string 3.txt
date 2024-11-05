@@ -1,0 +1,5 @@
+s=input()
+m=s.split()
+for i in m:
+    d=i[::-1]
+    print(d,end=" ")

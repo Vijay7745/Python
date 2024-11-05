@@ -1,0 +1,8 @@
+s1=input()
+s2=input()
+s=s1+s2
+s=list(s)
+s.sort()
+s.sort()
+s=''.join(s)
+print(s)

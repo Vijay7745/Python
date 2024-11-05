@@ -1,0 +1,57 @@
+int main()
+{
+    int n,c=0,add=0,res,y,sum=0;
+    float mid;
+    scanf("%d",&n);
+    if(n%2!=0)
+    {
+    mid=n/2;
+    res=ceil(mid);
+    y=res+1;
+    int x[n];
+    do
+    {
+        scanf("%d",&x[c]);
+        c++;
+    }while(getchar() != '\n' && c<n);
+    while(res>=0 && y<n)
+    {
+    for(res;res>=0;res--)
+    {
+        add=add+x[res];
+    }
+    for(y;y<n;y++)
+    {
+        sum=sum+x[y];
+    }
+    }
+    }
+    else
+    {
+    mid=n/2;
+    res=mid-1;
+    y=mid;
+    int x[n];
+    do
+    {
+        scanf("%d",&x[c]);
+        c++;
+    }while(getchar() != '\n' && c<n);
+    while(res>=0 && y<n)
+    {
+    for(res;res>=0;res--)
+    {
+        add=add+x[res];
+    }
+    for(y;y<n;y++)
+    {
+        sum=sum+x[y];
+    }
+    }
+
+    }
+    if(sum==add)
+        printf("YES");
+    else
+    printf("NO");
+}

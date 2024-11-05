@@ -1,0 +1,15 @@
+def f():
+    t=int(input())
+    while t:
+        n=int(input())
+        ary=list(map(int,input().split()))
+        ans=1
+        prev=ary[0]
+        
+        for i in range(1,n):
+            if ary[i]<+prev:
+                ans=ans+1
+                prev=ary[i]
+        print(ans)
+        t=t-1
+f()

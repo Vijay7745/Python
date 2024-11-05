@@ -1,0 +1,5 @@
+n=int(input())
+r=list(map(int,input().split()))
+r.sort()
+k=' '.join([str(i) for i in r])
+print(k)

@@ -1,0 +1,5 @@
+from collections import Counter
+n=input()
+ini_list = list(map(int,input().split()))
+res = [key for key, value in Counter(ini_list).most_common()]
+print(*res)

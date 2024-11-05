@@ -1,0 +1,10 @@
+def merge(num1, num2):
+    arr3 = num1+num2
+    arr3.sort()
+    return arr3
+for i in range(int(input())):
+    n,k=input().split()
+    arr1=list(map(int,input().split()))
+    arr2=list(map(int,input().split()))
+    arr3=merge(arr1,arr2)
+    print(' '.join([str(i) for i in arr3]))

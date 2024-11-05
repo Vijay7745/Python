@@ -1,0 +1,4 @@
+l=['sunday','monday','tuesday','wednesday','thursday','friday','saturday','kryptonday','coluday','daxamday']
+for i in range(int(input())):
+    x=int(input())
+    print(l[x%10]) if x<100 else print(l[(x%296)%10])

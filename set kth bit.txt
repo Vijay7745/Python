@@ -1,0 +1,4 @@
+def setKthBin(n,k):
+    return ((1<<k)|n)
+n,k=list(map(int,input().split()))
+print(setKthBin(n,k))

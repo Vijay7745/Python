@@ -1,0 +1,18 @@
+def onesComplement(n):
+    v = []
+    while (n != 0):
+        v.append(n % 2)
+        n = n // 2
+    v.reverse()
+    for i in range(len(v)):
+        if (v[i] == 0):
+            v[i] = 1
+        else:
+            v[i] = 0
+    two = 1
+    for i in range(len(v) - 1, -1, -1):
+        n = n + v[i] * two
+        two = two * 2
+    return n
+n = int(input())
+print(onesComplement(n))

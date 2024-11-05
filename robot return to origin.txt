@@ -1,0 +1,15 @@
+s=input()
+x=y=0
+for i in range(len(s)):
+    if s[i]=='U':
+        x+=1
+    elif s[i]=='D':
+        x-=1
+    elif s[i]=='L':
+        y+=1
+    elif s[i]=='R':
+        y-=1
+if x==0 and y==0:
+    print(True)
+else:
+    print(False)

@@ -1,0 +1,17 @@
+a,b,c,d=map(int,input().split())
+def judge_prime_number(N):
+    number_list=range(2,N+1)
+    for k in number_list:
+        if N%k==0 and k!=N:
+            return False
+            break
+        elif k==N:
+            return True
+for i in range(a,b+1):
+    for j in range(c,d+1):
+        if judge_prime_number(i+j):
+            break
+        if j==d:
+            print('Takahashi')
+            exit()
+print('Aoki')

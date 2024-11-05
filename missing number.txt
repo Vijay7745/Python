@@ -1,0 +1,11 @@
+n=int(input())
+arr=[int(item) for item in input().split()]
+freq=[int(0) for i in range(n+1)]
+for x in arr:
+    freq[x]+=1
+ind=0
+while(ind<=n):
+    if(freq[ind]==0):
+        break
+    ind+=1
+print(ind)

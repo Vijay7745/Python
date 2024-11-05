@@ -1,0 +1,11 @@
+def check(l,n,t):
+    for i in range(n):
+        if l[i]==t:
+            return i+1
+        elif l[i]>t:
+            return i
+    return n
+for q in range(int(input())):
+    n,t=map(int,input().split())
+    l=list(map(int,input().split()))
+    print(check(l,n,t))
