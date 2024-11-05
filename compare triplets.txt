@@ -1,0 +1,13 @@
+def compareTriplets(a, b):
+    alice = 0
+    bob = 0
+    for i in range(len(a)):
+        if a[i] > b[i]:
+            alice += 1
+        elif a[i] < b[i]:
+            bob += 1
+    return alice, bob
+arr1=list(map(int,input().split()))
+arr2=list(map(int,input().split()))
+res=compareTriplets(arr1,arr2)
+print(' '.join([str(i) for i in res]))

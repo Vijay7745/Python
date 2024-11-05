@@ -1,0 +1,12 @@
+def find_index(arr, n, K):
+    for i in range(n):
+        if arr[i] == K:
+            return i
+        elif arr[i] > K:
+            return i
+    return n
+a=int(input())
+for i in range(a):
+    n,k=list(map(int,input().split()))
+    arr = list(map(int,input().split()))
+    print(find_index(arr,n,k))

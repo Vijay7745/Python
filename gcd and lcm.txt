@@ -1,0 +1,14 @@
+def gcd(a,b):
+	if a == 0:
+		return b
+	return gcd(b % a, a)
+def lcm(a,b):
+	return (a / gcd(a,b))* b
+t=int(input())
+for i in range(t):
+     l=list(map(int,input().split(' ')))
+     a=l[0]
+     b=l[1]
+     x=int(gcd(a,b))
+     y=int(lcm(a,b))
+     print(x,y)

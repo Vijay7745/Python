@@ -1,0 +1,18 @@
+def reachingPoints(sx,sy,tx,ty):
+        if sx > tx or sy > ty: return False
+        if sx == tx: return (ty-sy)%sx == 0 
+        if sy == ty: return (tx-sx)%sy == 0
+        if tx > ty: 
+            return reachingPoints(sx, sy, tx%ty, ty) 
+        elif tx < ty: 
+            return reachingPoints(sx, sy, tx, ty%tx)
+        else:
+            return False
+t=int(input())
+for i in range(t):
+      x=y=1
+      a,b=list(map(int,input().split()))
+      if reachingPoints(x,y,a,b):
+                 print("YES")
+      else:
+          print("NO")

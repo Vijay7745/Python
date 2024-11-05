@@ -1,0 +1,21 @@
+def checker(s1,s2):
+    ans='NO';
+    if len(s1)==len(s2):
+        for i in range(len(s1)):
+            if s1[i]==s2[i]:
+                ans='YES';
+            elif s1[i]>s2[i]:
+                ans='NO';
+                break;
+            elif s1[i]<s2[i]:
+                ans='YES';
+        return ans;
+    else:
+        ans='NO'
+    return ans;
+t=int(input())
+for i in range(t):
+    s1=input()
+    s2=input()
+    result=checker(s1,s2)
+    print(result)

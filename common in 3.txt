@@ -1,0 +1,15 @@
+for q in range(int(input())):
+    n,m,o=map(int,input().split())
+    a=list(map(int,input().split()))
+    b=list(map(int,input().split()))
+    c=list(map(int,input().split()))
+    k=[]
+    for i in a:
+        if i in b and i in c and i not in k:
+            k.append(i)
+    if k==[]:
+        print(-1)
+    else:
+        for i in k:
+            print(i,end=" ")
+        print('')

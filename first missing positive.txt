@@ -1,0 +1,25 @@
+class Solution:
+    def firstMissingPositive(self, nums):      
+        if not nums:
+            return 1
+        nums.sort()  
+        index = 1
+        prev_num = 0 
+        
+        for i in range(0,len(nums)):
+            if nums[i] <=0 or nums[i]==prev_num:
+                continue
+            
+            if nums[i]!= index:
+                return index
+            else:
+                prev_num = nums[i]
+                index+=1
+                
+        return index
+        
+ob = Solution()
+c=int(input())
+nums=list(map(int,input().split()))
+k= ob.firstMissingPositive(nums)
+print(k)

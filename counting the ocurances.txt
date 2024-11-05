@@ -1,0 +1,7 @@
+n=input()
+s=input().split()
+m=n
+if m.count(s[0])>0:
+    print(m.count(s[0]))
+else:
+    print(-1)

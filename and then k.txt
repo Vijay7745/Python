@@ -1,0 +1,11 @@
+n = int(input())
+x = []
+for i in range(n):
+    x.append(int(input()))
+    
+for j in x:
+    b = bin(j)[2:]
+    if len(b) > 1:
+        print(j-int(b[1:],2)-1)
+    else:
+        print(j-int(b,2))

@@ -1,0 +1,13 @@
+def extendedEuclideanAlgorithm(a,b):
+    if a == 0:
+        return b, 0, 1
+    gcd, u, v = extendedEuclideanAlgorithm(b % a, a)
+    x = v - (b // a ) * u
+    y = u
+    return gcd, x, y
+a=int(input())
+b=int(input())
+l=[]
+l=extendedEuclideanAlgorithm(a,b)
+for i in l:
+    print(i,end=' ')

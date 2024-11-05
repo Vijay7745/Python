@@ -1,0 +1,2 @@
+rangeList = range(0,21)
+lastNumber = rangeList[len(rangeList)-1:][0]

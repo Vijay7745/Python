@@ -1,0 +1,11 @@
+str=list(input())
+count_of_z=0
+count_of_o=0
+for i in range(len(str)):
+    if str[i]=='z':
+        count_of_z=count_of_z+1
+count_of_o=len(str)-count_of_z
+if count_of_o==2*count_of_z:
+    print("Yes")
+else:
+    print("No")

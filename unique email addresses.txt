@@ -1,0 +1,13 @@
+def numUniqueEmails(emails):
+    seen=set()
+    for email in emails:
+        local,domain=email.split('@')
+        local=local.split('+')[0].replace('.','')
+        seen.add(local+'@'+domain)
+    return len(seen)
+email=[]
+t=input()
+for i in range(int(t)):
+    x=input()
+    email.append(x)
+print(numUniqueEmails(email))

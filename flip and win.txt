@@ -1,0 +1,10 @@
+def solve():
+    n = int(input())
+    s = input()
+    fs = 0
+    for i in range(n - 1):
+        fs += int(s[i + 1]) ^ int(s[i])
+
+    print('Ashok' if (n - 1 - fs) % 3 else 'Sudhir')
+
+solve()

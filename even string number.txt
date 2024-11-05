@@ -1,0 +1,27 @@
+def solve(str):
+    import re
+     
+    digits=list(set(re.findall("\d", str)))
+    digits.sort()   # Sorting accordinfg to the Ascii value
+    digits.reverse()
+    num=int(''.join(digits))    # Joining all the digits into one
+     
+    if(num%2==0):
+        print(num)
+    else:
+        length=len(digits)
+        for i in range(length-1, 0, -1):
+            if int(digits[i])%2==0:
+                d=digits[i]
+                digits.remove(d)
+                digits.insert(length-1, d)
+                even_number=int(''.join(digits))
+                 
+                print(even_number)
+                break
+        else:
+            print("-1")
+ 
+
+str=input()
+solve(str)

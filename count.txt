@@ -1,0 +1,9 @@
+n=int(input())
+l=list(map(int,input().split()))
+oddc,evenc=0,0
+for i in range(n):
+    if l[i]%2==0:
+        evenc+=1
+    else:
+        oddc+=1
+print(evenc,oddc)

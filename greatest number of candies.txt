@@ -1,0 +1,17 @@
+n=int(input())
+l=list(map(int,input().split()))
+c=int(input())
+s=[]
+m=max(l)
+for i in range(n):
+    if l[i]<m:
+        for j in range(1,c+1):
+            if l[i]+j==m:
+                s.append("True")
+                break
+        else:
+            s.append("False")
+    elif l[i]==m:
+        s.append("True")
+    
+print(*s)

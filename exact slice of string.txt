@@ -1,0 +1,5 @@
+string=input()
+start=int(input())
+end=int(input())
+n=slice(start,end+1)
+print(string[n])
